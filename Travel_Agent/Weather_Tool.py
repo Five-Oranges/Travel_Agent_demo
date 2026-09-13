@@ -10,7 +10,7 @@ def get_weather(city: str) -> str:
 
     try:
         # 发起网络请求
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         # 检查响应状态码是否为200 (成功)
         response.raise_for_status()
         # 解析返回的JSON数据
